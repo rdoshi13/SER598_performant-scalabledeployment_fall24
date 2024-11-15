@@ -1,0 +1,53 @@
+{
+    "743e9284bjdf2": [
+        {
+            "question": "Who is the president of USA?",
+            "options": ["Donald Trump", "Joe Biden", "Kamala Harris", "Javed Jafari"],
+            "answer": 1
+        },
+        {
+            "question": "What is the capital of France?",
+            "options": ["Berlin", "Madrid", "Paris", "Rome"],
+            "answer": 2
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": ["Earth", "Mars", "Jupiter", "Venus"],
+            "answer": 1
+        }
+    ],
+    "843kdhf92kd83": [
+        {
+            "question": "Who wrote 'To Kill a Mockingbird'?",
+            "options": ["Harper Lee", "Ernest Hemingway", "J.K. Rowling", "F. Scott Fitzgerald"],
+            "answer": 0
+        },
+        {
+            "question": "What is the largest ocean on Earth?",
+            "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+            "answer": 3
+        },
+        {
+            "question": "What is the chemical symbol for water?",
+            "options": ["O2", "H2O", "CO2", "H2"],
+            "answer": 1
+        }
+    ],
+    "593kfj392kd92": [
+        {
+            "question": "In what year did the Titanic sink?",
+            "options": ["1912", "1905", "1921", "1898"],
+            "answer": 0
+        },
+        {
+            "question": "Which scientist developed the theory of relativity?",
+            "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+            "answer": 1
+        },
+        {
+            "question": "How many continents are there on Earth?",
+            "options": ["5", "6", "7", "8"],
+            "answer": 2
+        }
+    ]
+}

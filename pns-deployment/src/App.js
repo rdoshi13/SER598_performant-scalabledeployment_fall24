@@ -3,8 +3,11 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CloudComputing from './CloudComputing';
 import Containers from './Containers';
+import Quiz from './Quiz';
+
 
 function App() {
+  const uniqueKey = '743e9284bjdf2'; 
   return (
     <Router>
       <div className="App">
@@ -22,11 +25,16 @@ function App() {
               <li><a href="#ci-cd">Continuous Integration and Deployment (CI/CD)</a></li>
             </ul>
           </section>
+
         </header>
         <Routes>
           <Route path="/cloud-computing" element={<CloudComputing />} />
           <Route path="/containers" element={<Containers />} />
         </Routes>
+        <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#f4f4f4', borderRadius: '8px' }}>
+            <h2>Quiz Section</h2>
+            <Quiz uniqueKey={uniqueKey} />
+        </div>
       </div>
     </Router>
   );
