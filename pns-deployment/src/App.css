@@ -1,51 +1,140 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+  border-bottom: 3px solid #0056b3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-.App-header {
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #0056b3;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li {
+  margin: 10px 0;
 }
 
-.CloudComputing section {
-  margin: 20px 0;
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Links */
+.Table-of-contents ul {
   padding: 15px;
+  background-color: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.Table-of-contents ul li {
+  margin: 8px 0;
+}
+
+.Table-of-contents a {
+  color: #0056b3;
+  font-weight: bold;
+}
+
+/* Sections */
+.CloudComputing section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 800px;
 }
 
 .CloudComputing img {
   max-width: 100%;
   height: auto;
   margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Quiz Section */
+div {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+div h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .Table-of-contents ul {
+    padding: 10px;
+  }
+
+  div {
+    padding: 15px;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 3px solid #0056b3;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
