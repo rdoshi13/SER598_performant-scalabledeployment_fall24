@@ -35,3 +35,8 @@ A Content Delivery Network (CDN) can solve these issues by deploying edge server
 - Traffic is distributed among multiple edge servers, preventing the San Jose host from becoming a bottleneck.
 4. Faster User Experience:
 - All users, regardless of location, experience faster load times and consistent performance.
+![alt text](CDN_Example_improved.drawio.png)
+
+### Conclusion
+In the original setup, the central server in San Jose causes increasing latency for users further away (Nepal being the worst affected). A CDN mitigates this by reducing the distance between the user and the content, ensuring a faster, more reliable experience for everyone. This approach is critical for businesses targeting a global audience.
+
