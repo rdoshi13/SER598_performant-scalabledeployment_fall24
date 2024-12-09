@@ -29,6 +29,11 @@ h2 {
   color: #0056b3;
 }
 
+h3 {
+  font-size: 1.5rem;
+  color: #0056b3;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -47,13 +52,35 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Navigation Links */
+/* Header Styling */
+.App-header {
+  background-color: #007bff;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  border-bottom: 4px solid #0056b3;
+}
+
+.App-subheading {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+/* Table of Contents */
+.Table-of-contents {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
 .Table-of-contents ul {
   padding: 15px;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
   display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .Table-of-contents ul li {
@@ -63,9 +90,74 @@ a:hover {
 .Table-of-contents a {
   color: #0056b3;
   font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
 }
 
-/* Sections */
+.Table-of-contents a:hover {
+  color: white;
+  background-color: #007bff;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.Table-of-contents a:target {
+  color: white;
+  background-color: #0056b3;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Overview Section */
+.Overview {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e9f7ff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.Overview h2 {
+  color: #0056b3;
+  font-size: 1.8rem;
+}
+
+.Overview p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Topics Overview */
+.Topics-overview {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.Topics-overview section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Topics-overview section h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.Topics-overview section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* CloudComputing Section */
 .CloudComputing section {
   margin: 20px auto;
   padding: 20px;
@@ -97,6 +189,27 @@ div h2 {
   color: #333;
 }
 
+/* Footer Styling */
+footer {
+  margin-top: 30px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-top: 4px solid #0056b3;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #f8d775;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   header {
@@ -115,26 +228,15 @@ div h2 {
     padding: 10px;
   }
 
+  .Topics-overview section {
+    padding: 10px;
+  }
+
   div {
     padding: 15px;
   }
-}
 
-/* Footer Styling */
-footer {
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  margin-top: 20px;
-  border-top: 3px solid #0056b3;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  footer {
+    padding: 10px;
+  }
 }
