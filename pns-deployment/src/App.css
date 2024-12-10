@@ -70,7 +70,7 @@ a:hover {
 /* Table of Contents */
 .Table-of-contents {
   margin: 20px auto;
-  max-width: 800px;
+  max-width: 1000px;
   text-align: left;
 }
 
@@ -114,7 +114,7 @@ a:hover {
   background-color: #e9f7ff;
   border: 1px solid #007bff;
   border-radius: 8px;
-  max-width: 800px;
+  max-width: 1000px;
   text-align: left;
 }
 
@@ -133,7 +133,7 @@ a:hover {
 .Topics-overview {
   margin: 20px auto;
   padding: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   text-align: left;
 }
 
@@ -164,7 +164,7 @@ a:hover {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .CloudComputing img {
@@ -178,7 +178,7 @@ a:hover {
 div {
   margin: 20px auto;
   padding: 20px;
-  max-width: 800px;
+  max-width: 1000px;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -266,4 +266,17 @@ footer a:hover {
   background-color: #007bff;
   color: white;
 }
+pre code {
+  display: block;
+  background-color: #f7f9fc;
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+}
 
+section {
+  margin-bottom: 20px;
+}
