@@ -3,10 +3,14 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CloudComputing from './CloudComputing';
 import Containers from './Containers';
+import Kubernetes from './Kubernetes';
+
 import CICD from './CICD';
 
 function Home() {
   return (
+    
+     
     <div>
       {/* Header Section */}
       <header className="App-header">
@@ -90,9 +94,12 @@ function App() {
         <Route path="/cloud-computing" element={<CloudComputing />} />
         <Route path="/containers" element={<Containers />} />
         <Route path="/ci-cd" element={<CICD />} />
+        <Route path="/kubernetes" element={<Kubernetes />} />
       </Routes>
     </Router>
   );
 }
 
+
 export default App;
+
