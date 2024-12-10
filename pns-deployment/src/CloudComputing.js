@@ -96,24 +96,105 @@ function CloudComputing() {
       </section>
       
       <section>
-        <h2>Code</h2>
-        <pre>
-          <code>
-            {`// Example code for deploying a cloud instance
-const deployInstance = () => {
-  console.log("Deploying cloud instance...");
+  <h2>How to Create an EC2 Instance on AWS</h2>
+  
+  <ol>
+    <li><strong>Sign in to the AWS Management Console:</strong> 
+      <p>Go to the <a href="https://aws.amazon.com/console/" target="_blank" rel="noopener noreferrer">AWS Management Console</a> and log in using your credentials.</p>
+    </li>
+    <li><strong>Navigate to the EC2 Dashboard:</strong> 
+      <p>Search for "EC2" in the AWS Management Console search bar and click on "EC2" under Services.</p>
+    </li>
+    <li><strong>Launch an EC2 Instance:</strong> 
+      <p>Click the <strong>Launch Instance</strong> button and enter a name for your instance.</p>
+    </li>
+    <li><strong>Choose an Amazon Machine Image (AMI):</strong> 
+      <p>Select <strong>Amazon Linux 2 AMI</strong> (Free Tier eligible).</p>
+    </li>
+    <li><strong>Select an Instance Type:</strong> 
+      <p>Choose the <strong>t2.micro</strong> instance type (Free Tier eligible).</p>
+    </li>
+    <li><strong>Configure Instance Details:</strong> 
+      <p>Leave the default settings for <strong>Network, Subnet, and Auto-assign Public IP</strong>.</p>
+    </li>
+    <li><strong>Add Storage:</strong> 
+      <p>By default, 8 GB of General Purpose SSD (gp2) is allocated. Adjust if needed.</p>
+    </li>
+    <li><strong>Add Tags (Optional):</strong> 
+      <p>Add key-value pairs for tags to identify your instance (e.g., <strong>Key:</strong> Name, <strong>Value:</strong> MyInstance).</p>
+    </li>
+    <li><strong>Configure Security Group:</strong> 
+      <p>Create a new security group and allow <strong>SSH (port 22)</strong>. Optionally, allow <strong>HTTP (port 80)</strong> for web servers.</p>
+    </li>
+    <li><strong>Review and Launch:</strong> 
+      <p>Review all settings, click <strong>Launch</strong>, and select a key pair. Download the private key file <code>.pem</code> and keep it secure.</p>
+    </li>
+    <li><strong>Connect to Your Instance:</strong> 
+      <p>Use the following command to connect to your instance:</p>
+      <pre>
+        <code>
+          ssh -i /path/to/your-key.pem ec2-user@{'<your-instance-public-ip>'}
+        </code>
+      </pre>
+    </li>
+  </ol>
+
+  <h2>Example Code Snippet</h2>
+  <pre>
+    <code>
+      {`// Example code for creating an EC2 instance using AWS SDK
+const AWS = require('aws-sdk');
+
+// Configure AWS with your access and secret keys. These are unique for all users.
+AWS.config.update({
+  accessKeyId: '<access key>',
+  secretAccessKey: '<secret key>',
+  region: 'us-east-1',
+});
+
+// EC2 instance parameters
+const params = {
+  ImageId: 'ami-0c55b159cbfafe1f0', // Example Amazon Linux 2 AMI
+  InstanceType: 't2.micro',         // Free tier eligible instance
+  MinCount: 1,
+  MaxCount: 1,
 };
 
-deployInstance();`}
-          </code>
-        </pre>
-      </section>
+// Create an EC2 instance
+const ec2 = new AWS.EC2();
+
+ec2.runInstances(params, (err, data) => {
+  if (err) {
+    console.error('Error launching EC2 instance:', err);
+  } else {
+    console.log('EC2 instance created:', data.Instances[0].InstanceId);
+  }
+});`}
+    </code>
+  </pre>
+</section>
+
+
       
-      <section>
-        <h2>Interactive Sandbox</h2>
-        <p>A placeholder for an interactive sandbox where users can try cloud computing demos. This could use a real-time editor in the future.</p>
-        {/* Sandbox optional */}
-      </section>
+<section>
+  <h2>Demo creating an EC2 instance</h2>
+  <iframe
+    src="https://codesandbox.io/p/devbox/romantic-snowflake-k8dsq1?embed=1&file=%2Findex.js"
+    style={{
+      width: '100%',
+      height: '500px',
+      border: '0',
+      borderRadius: '4px',
+      overflow: 'hidden',
+    }}
+    title="dawn-butterfly-qzrdkr"
+    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+  />
+  <p><a href="https://codesandbox.io/p/devbox/dawn-butterfly-qzrdkr" target="_blank" rel="noopener noreferrer">EC2 instance demo in CodeSandBox.</a></p>
+</section>
+
+
     </div>
   );
 }
