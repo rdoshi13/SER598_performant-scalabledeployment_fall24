@@ -18,43 +18,109 @@ function Kubernetes() {
         </p>
         <h3>Features</h3>
         <ul>
-          <li>Automated container deployment, scaling, and management</li>  
-          <li>Service discovery and load balancing</li>
-          <li>Storage orchestration</li>
-          <li>Self-healing capabilities</li>
-          <li>Automated rollouts and rollbacks</li>
+          <li>1. Automated container deployment, scaling, and management</li>  
+          <li>2. Service discovery and load balancing</li>
+          <li>3. Storage orchestration</li>
+          <li>4. Self-healing capabilities</li>
+          <li>5. Automated rollouts and rollbacks</li>
         </ul>
 
         <h3>Usage</h3>
         <p>After this tutorial, you will be able to do: </p>
         <ul>
           <li>
-            Deploy a containerized application.
+            1. Deploy a containerized application.
           </li>
           <li>
-            Scale the deployment.
+            2. Scale the deployment.
           </li>
           <li>
-            Debug the containerized application.
+            3. Debug the containerized application.
           </li>
         </ul>
 
         <h3>What can Kubernetes do for you?</h3>
         <ul>
           <li>Containerization helps package software to enable frequent releases and updates and avoid application downtime.</li>
-          <li>Kubernetes ensures that containerized applications run where and when needed.
-          Access necessary resources and tools.</li>
+          <li>Kubernetes ensures that containerized applications run where and when needed and access necessary resources and tools.</li>
         </ul>
+      </section>
+      <section className="commonwords">
+        <h2>Commonly used terms in Kubernetes</h2>
+
+        <ul>
+  <li>
+    <strong>Cluster</strong>
+    <p>
+      A Kubernetes cluster is a set of machines (nodes) that work together to run containerized applications. 
+      It consists of a control plane that manages the cluster and worker nodes where applications are deployed. 
+      The control plane schedules workloads, manages resources, and ensures the desired state of the cluster.
+    </p>
+  </li>
+  <li>
+    <strong>Container</strong>
+    <p>
+      A container is a lightweight, standalone executable package that includes everything needed to run an application, 
+      such as the code, runtime, libraries, and dependencies. Containers ensure consistency across development, testing, and production environments.
+      They are managed and orchestrated by Kubernetes to enable scalability and high availability.
+    </p>
+  </li>
+  <li>
+    <strong>Deployment</strong>
+    <p>
+      A Deployment in Kubernetes is a controller that defines how applications are deployed on the cluster. 
+      It allows for declarative updates to applications, ensuring a specific number of replicas are running at all times. 
+      Deployments are used to automate scaling, rolling updates, and rollback of applications if a failure occurs during deployment.
+    </p>
+  </li>
+  <li>
+    <strong>kubectl</strong>
+    <p>
+      kubectl is the command-line tool used to interact with Kubernetes clusters. 
+      It allows you to deploy and manage applications, inspect cluster resources, view logs, and troubleshoot issues. 
+      Common commands include <code>kubectl apply</code> for deploying resources and <code>kubectl get pods</code> for viewing active Pods.
+    </p>
+  </li>
+  <li>
+    <strong>Minikube</strong>
+    <p>
+      Minikube is a tool that lets you run a single-node Kubernetes cluster on your local machine. It is commonly used for learning and development purposes. 
+      Minikube supports most Kubernetes features, including DNS, NodePorts, ConfigMaps, and Secrets. 
+      It is ideal for experimenting with Kubernetes locally without needing a full production-grade cluster.
+    </p>
+    <p>
+      To start Minikube, you can use the command: <code>minikube start</code>. 
+      After starting, Minikube provides a local Kubernetes cluster that is ready for you to deploy applications.
+    </p>
+  </li>
+  <li>
+    <strong>Node</strong>
+    <p>
+      A Node is a physical or virtual machine that is part of a Kubernetes cluster. Each Node includes the container runtime (e.g., Docker), 
+      kubelet (an agent that communicates with the control plane), and kube-proxy (a network proxy for managing network rules). 
+      Nodes run containerized applications and report their status to the control plane.
+    </p>
+  </li>
+  <li>
+    <strong>Pod</strong>
+    <p>
+      A Pod is the smallest deployable unit in Kubernetes. It represents a single instance of a running application and can contain 
+      one or more tightly coupled containers that share the same storage, network, and lifecycle. Pods ensure that containers run in a shared context 
+      and are often used to group related services or processes together.
+    </p>
+  </li>
+</ul>
       </section>
 
       <section className="prerequisites">
         <h2>Prerequisites</h2>
         <p>Before starting with Kubernetes, you should have:</p>
         <ul>
-          <li>Basic knowledge of containers management tools like Docker.</li>
-          <li>Understanding of REST API</li>
-          <li>Basic understanding of YAML</li>
+          <li>1. Basic knowledge of containers management tools like Docker.</li>
+          <li>2. Understanding of REST API</li>
+          <li>3. Basic understanding of YAML</li>
         </ul>
+        <p>Now, lets see the installation of minikube and kubernetes with the help of a sample spring boot project.</p>
       </section>
 
       <section className="installation">
@@ -198,8 +264,8 @@ Done! kubectl is now configured to use "minikube" cluster and "default" namespac
     Follow these steps to create a simple Spring Boot project:
   </p>
 
-  <h3>Step 1: Clone the Project</h3>
-  <p>Navigate to the following GitHub repository to get started with a pre-configured Spring Boot project:</p>
+  <p><b>Step 1: Clone the Project</b></p>
+  <p>Navigate to the following GitHub repository to get started with a pre-configured Spring Boot project.</p>
   <p>
     <a
       href="git clone https://github.com/spring-guides/gs-spring-boot.git"
@@ -216,12 +282,12 @@ Done! kubectl is now configured to use "minikube" cluster and "default" namespac
     </code>
   </pre>
 
-  <h3>Step 2: Import the Project into Your IDE</h3>
+  <p><b>Step 2: Import the Project into Your IDE</b></p>
   <p>
-    Open your favorite IDE (e.g., IntelliJ IDEA or Eclipse) and import the project as a Maven project.
+    Open your favorite IDE (e.g., IntelliJ IDEA or Eclipse) and import the project as a Gradle project.
   </p>
 
-  <h3>Step 4: Run the Application</h3>
+  <p><b>Step 3: Run the Application</b></p>
   <p>
     Run the application using your IDE or the following Gradle command:
   </p>
@@ -231,7 +297,7 @@ Done! kubectl is now configured to use "minikube" cluster and "default" namespac
     </code>
   </pre>
 
-  <h3>Step 5: Test the Endpoint</h3>
+  <p><b>Step 4: Test the Endpoint</b></p>
   <p>
     Open a browser or use a tool like Postman to test the endpoint:
   </p>
