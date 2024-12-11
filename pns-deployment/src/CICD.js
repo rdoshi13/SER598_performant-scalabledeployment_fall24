@@ -10,9 +10,6 @@ function CICD() {
         <Link to="/" className="home-button">
           Home
         </Link>
-        <Link to="/containers" className="next-button">
-          Containers
-        </Link>
       </div>
 
       <h1>Continuous Integration and Deployment (CI/CD)</h1>
