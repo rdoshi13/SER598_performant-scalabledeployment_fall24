@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import quizData from './quiz.json';
 import './Quiz.css';
 
@@ -27,7 +28,25 @@ const Quiz = ({ uniqueKey }) => {
     };
 
     if (isCompleted) {
-        return <div className="quiz-container">Your score is {score} out of {questions.length}</div>;
+        return (
+            <div className="quiz-container">
+                <p>Your score is {score} out of {questions.length}</p>
+                <Link to="/" style={{
+                    display: 'inline-block',
+                    padding: '10px 20px',
+                    fontSize: '16px',
+                    fontWeight: 'bold',
+                    color: '#ffffff',
+                    backgroundColor: '#2196f3',
+                    border: 'none',
+                    borderRadius: '8px',
+                    textDecoration: 'none',
+                    cursor: 'pointer'
+                }}>
+                    Return to Main Menu
+                </Link>
+            </div>
+        );
     }
 
     if (questions.length === 0) {
@@ -38,7 +57,6 @@ const Quiz = ({ uniqueKey }) => {
 
     return (
         <div className="quiz-container">
-            {/* <h2 className="quiz-title">Quiz</h2> */}
             <h4 className="quiz-question">{question}</h4>
             <ul className="quiz-options">
                 {options.map((option, index) => (

@@ -49,5 +49,32 @@
             "options": ["5", "6", "7", "8"],
             "answer": 2
         }
+    ],
+    "cicdQuiz": [
+        {
+            "question": "What does CI/CD stand for?",
+            "options": ["Continuous Integration and Continuous Deployment", "Continuous Innovation and Continuous Design", "Continuous Integration and Centralized Development", "Code Integration and Code Deployment"],
+            "answer": 0
+        },
+        {
+            "question": "Which tool is mentioned as a free and open-source automation server used in CI/CD?",
+            "options": ["Git", "Jenkins", "Docker", "Kubernetes"],
+            "answer": 1
+        },
+        {
+            "question": "What command verifies that Docker is installed and running?",
+            "options": ["docker build .", "docker start", "docker run hello-world", "docker compose up -d"],
+            "answer": 2
+        },
+        {
+            "question": "In Jenkins, what type of job configuration uses pipeline scripts?",
+            "options": ["Freestyle Project", "Multibranch Project", "Pipeline", "External Job"],
+            "answer": 2
+        },
+        {
+            "question": "Which Docker image was used as an example for running npm within Jenkins?",
+            "options": ["node:18-alpine", "jenkins/jenkins", "ubuntu:latest", "node:10"],
+            "answer": 0
+        }
     ]
 }
