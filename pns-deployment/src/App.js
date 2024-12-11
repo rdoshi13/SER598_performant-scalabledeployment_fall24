@@ -96,8 +96,8 @@ function App() {
         <Route path="/kubernetes" element={<Kubernetes />} />
 
     
-        <Route path="/quiz" element={<Quiz uniqueKey="cicdQuiz" />} />
-      </Routes>
+        <Route path="/quiz/:quizKey" element={<Quiz />} />
+        </Routes>
     </Router>
   );
 }

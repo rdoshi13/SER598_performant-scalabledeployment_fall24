@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import quizData from './quiz.json';
 import './Quiz.css';
 
-const Quiz = ({ uniqueKey }) => {
+const Quiz = () => {
+    const { quizKey } = useParams();
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOption, setSelectedOption] = useState(null);
     const [score, setScore] = useState(0);
     const [isCompleted, setIsCompleted] = useState(false);
 
-    const questions = quizData[uniqueKey] || [];
+    // const questions = quizData[uniqueKey] || [];
+    const questions = quizData[quizKey] || [];
+
 
     const handleOptionSelect = (index) => {
         setSelectedOption(index);

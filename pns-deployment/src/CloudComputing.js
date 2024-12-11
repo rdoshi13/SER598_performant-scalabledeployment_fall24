@@ -154,7 +154,7 @@ AWS.config.update({
 
 // EC2 instance parameters
 const params = {
-  ImageId: 'ami-0c55b159cbfafe1f0', // Example Amazon Linux 2 AMI
+  ImageId: 'ami-0c55b159cbfafe1f0', // The AMI must match the region. Check in your dashboard to confirm.
   InstanceType: 't2.micro',         // Free tier eligible instance
   MinCount: 1,
   MaxCount: 1,
@@ -173,6 +173,20 @@ ec2.runInstances(params, (err, data) => {
     </code>
   </pre>
 </section>
+<Link to="/quiz/cloudComputingQuiz" style={{
+    display: 'inline-block',
+    padding: '10px 20px',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: '#ffffff',
+    backgroundColor: '#2196f3',
+    border: 'none',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    cursor: 'pointer',
+}}>
+    Knowledge Check
+</Link>
 
 
       
