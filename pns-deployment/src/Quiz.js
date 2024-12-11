@@ -1,88 +1,121 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import quizData from './quiz.json';
-import './Quiz.css';
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import quizData from "./quiz.json";
+import { useLocation } from "react-router-dom";
+import "./Quiz.css";
 
 const Quiz = () => {
-    const { quizKey } = useParams();
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [score, setScore] = useState(0);
-    const [isCompleted, setIsCompleted] = useState(false);
+  const { quizKey } = useParams();
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [score, setScore] = useState(0);
+  const [isCompleted, setIsCompleted] = useState(false);
+  const location = useLocation();
+  const backTo = location.state?.backTo || "/";
+  const pageName = location.state?.pageName || "Home";
 
-    // const questions = quizData[uniqueKey] || [];
-    const questions = quizData[quizKey] || [];
+  // const questions = quizData[uniqueKey] || [];
+  const questions = quizData[quizKey] || [];
 
+  const handleOptionSelect = (index) => {
+    setSelectedOption(index);
+  };
 
-    const handleOptionSelect = (index) => {
-        setSelectedOption(index);
-    };
-
-    const handleSubmitAnswer = () => {
-        if (selectedOption === questions[currentQuestionIndex].answer) {
-            setScore(score + 1);
-        }
-        setSelectedOption(null);
-        if (currentQuestionIndex < questions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-        } else {
-            setIsCompleted(true);
-        }
-    };
-
-    if (isCompleted) {
-        return (
-            <div className="quiz-container">
-                <p>Your score is {score} out of {questions.length}</p>
-                <Link to="/" style={{
-                    display: 'inline-block',
-                    padding: '10px 20px',
-                    fontSize: '16px',
-                    fontWeight: 'bold',
-                    color: '#ffffff',
-                    backgroundColor: '#2196f3',
-                    border: 'none',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    cursor: 'pointer'
-                }}>
-                    Return to Main Menu
-                </Link>
-            </div>
-        );
+  const handleSubmitAnswer = () => {
+    if (selectedOption === questions[currentQuestionIndex].answer) {
+      setScore(score + 1);
     }
-
-    if (questions.length === 0) {
-        return <div className="quiz-container">No questions available.</div>;
+    setSelectedOption(null);
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setIsCompleted(true);
     }
+  };
 
-    const { question, options } = questions[currentQuestionIndex];
-
+  if (isCompleted) {
     return (
-        <div className="quiz-container">
-            <h4 className="quiz-question">{question}</h4>
-            <ul className="quiz-options">
-                {options.map((option, index) => (
-                    <li key={index} className="quiz-option">
-                        <label>
-                            <input
-                                type="radio"
-                                name="option"
-                                value={index}
-                                checked={selectedOption === index}
-                                onChange={() => handleOptionSelect(index)}
-                            />
-                            <span className="option-text">{option}</span>
-                        </label>
-                    </li>
-                ))}
-            </ul>
-            <button className="submit-button" onClick={handleSubmitAnswer} disabled={selectedOption === null}>
-                Submit Answer
-            </button>
+      <div className="quiz-container">
+        <p>
+          Your score is {score} out of {questions.length}
+        </p>
+        <div className="quiz-navigation-buttons">
+          <Link
+            to="/"
+            style={{
+              display: "inline-block",
+              padding: "10px 20px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#ffffff",
+              backgroundColor: "#2196f3",
+              border: "none",
+              borderRadius: "8px",
+              textDecoration: "none",
+              cursor: "pointer",
+              marginRight: "10px",
+            }}
+          >
+            Return to Home
+          </Link>
+
+          <Link
+            to={backTo}
+            style={{
+              display: "inline-block",
+              padding: "10px 20px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#ffffff",
+              backgroundColor: "#4caf50",
+              border: "none",
+              borderRadius: "8px",
+              textDecoration: "none",
+              cursor: "pointer",
+            }}
+          >
+            Back to {pageName}
+          </Link>
         </div>
+      </div>
     );
+  }
+
+  if (questions.length === 0) {
+    return <div className="quiz-container">No questions available.</div>;
+  }
+
+  const { question, options } = questions[currentQuestionIndex];
+
+  return (
+    <div className="quiz-container">
+      <h4 className="quiz-question">{question}</h4>
+      <ul className="quiz-options">
+        {options.map((option, index) => (
+          <li key={index} className="quiz-option">
+            <label>
+              <input
+                type="radio"
+                name="option"
+                value={index}
+                checked={selectedOption === index}
+                onChange={() => handleOptionSelect(index)}
+              />
+              <span className="option-text">{option}</span>
+            </label>
+          </li>
+        ))}
+      </ul>
+      <button
+        className="submit-button"
+        onClick={handleSubmitAnswer}
+        disabled={selectedOption === null}
+      >
+        Submit Answer
+      </button>
+    </div>
+  );
 };
 
 export default Quiz;
