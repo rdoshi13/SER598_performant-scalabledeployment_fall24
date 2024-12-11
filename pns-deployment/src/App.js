@@ -4,13 +4,12 @@ import './App.css';
 import CloudComputing from './CloudComputing';
 import Containers from './Containers';
 import Kubernetes from './Kubernetes';
-
 import CICD from './CICD';
+// Import the Quiz component
+import Quiz from './Quiz'; 
 
 function Home() {
   return (
-    
-     
     <div>
       {/* Header Section */}
       <header className="App-header">
@@ -87,19 +86,20 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Home Page Route */}
+        
         <Route path="/" element={<Home />} />
 
-        {/* Topic Routes */}
+        
         <Route path="/cloud-computing" element={<CloudComputing />} />
         <Route path="/containers" element={<Containers />} />
         <Route path="/ci-cd" element={<CICD />} />
         <Route path="/kubernetes" element={<Kubernetes />} />
+
+    
+        <Route path="/quiz" element={<Quiz uniqueKey="cicdQuiz" />} />
       </Routes>
     </Router>
   );
 }
 
-
 export default App;
-
