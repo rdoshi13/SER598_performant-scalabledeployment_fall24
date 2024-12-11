@@ -76,5 +76,42 @@
             "options": ["node:18-alpine", "jenkins/jenkins", "ubuntu:latest", "node:10"],
             "answer": 0
         }
-    ]
+    ],
+        "cloudComputingQuiz": [
+            {
+                "question": "What does IaaS stand for?",
+                "options": ["Infrastructure as a Service", "Internet as a Service", "Integration as a Service", "Instance as a Service"],
+                "answer": 0
+            },
+            {
+                "question": "Which is an example of SaaS?",
+                "options": ["Google Drive", "Amazon EC2", "Docker", "Kubernetes"],
+                "answer": 0
+            }
+        ],
+        "containersQuiz": [
+            {
+                "question": "What is Docker used for?",
+                "options": ["Hosting applications", "Containerizing applications", "Orchestrating containers", "Monitoring networks"],
+                "answer": 1
+            },
+            {
+                "question": "Which file defines the environment for a Docker container?",
+                "options": ["Dockerfile", "Config.yml", "Package.json", "app.js"],
+                "answer": 0
+            }
+        ],
+        "kubernetesQuiz": [
+            {
+                "question": "What does a Kubernetes Pod represent?",
+                "options": ["A virtual machine", "A single container", "A group of containers", "A cluster node"],
+                "answer": 2
+            },
+            {
+                "question": "Which command scales up a Kubernetes deployment?",
+                "options": ["kubectl apply", "kubectl scale", "kubectl run", "kubectl get pods"],
+                "answer": 1
+            }
+        ]
+    
 }
