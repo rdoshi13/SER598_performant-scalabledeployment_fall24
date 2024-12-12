@@ -12,11 +12,11 @@ function CICD() {
         </Link>
       </div>
       <header className="App-header">
-      <h1>Continuous Integration and Deployment (CI/CD)</h1>
+        <h1>Continuous Integration and Deployment (CI/CD)</h1>
       </header>
 
       <section>
-        <h2>What is CI/CD?</h2>
+        <h2>Tutorial Learning Outcomes</h2>
         <p>
           CI/CD stands for Continuous Integration and Continuous Deployment. It
           is a set of practices and tools that automate software development
@@ -24,6 +24,42 @@ function CICD() {
           run automated tests, and deploy new software versions quickly and
           reliably.
         </p>
+        
+        {/* Learning Outcomes Section */}
+        <ul>
+          <li>
+            Jenkins Installation and Setup: The student will learn how to set up
+            Jenkins using Docker, including building and running Docker
+            containers, accessing Jenkins through a web browser, and configuring
+            initial admin credentials.
+          </li>
+          <li>
+            Job Creation and Execution: The student will learn how to create and
+            execute both Freestyle and Pipeline jobs in Jenkins, understanding
+            the key differences between the two job types and how to run basic
+            shell commands within Jenkins.
+          </li>
+          <li>
+            Version Control Integration with Git: The student will learn how to
+            integrate Jenkins with GitHub, including forking repositories,
+            cloning them locally, managing dependencies using npm install, and
+            configuring Jenkins to pull pipeline scripts from a Git repository
+            using SCM (Source Code Management).
+          </li>
+          <li>
+            Docker Integration for Jenkins Pipelines: The student will learn how
+            to use Docker as an agent within Jenkins pipelines, leveraging
+            pre-built Docker images to execute commands like npm --version, and
+            understanding how Docker containers streamline CI/CD processes.
+          </li>
+          <li>
+            Pipeline Scripting and Build Automation: The student will learn how
+            to create and modify Jenkinsfile scripts to define multi-stage
+            pipelines, use advanced shell scripting to inspect and manage
+            project files, automate the CI/CD workflow with npm ci and npm run
+            build, and analyze console output to debug build issues.
+          </li>
+        </ul>
       </section>
 
       <section>
@@ -409,6 +445,41 @@ function CICD() {
           Knowledge Check
         </Link>
       </div>
+
+      {/* References Section */}
+      <section>
+        <h2>References</h2>
+        <p>The following sources were used to create this tutorial:</p>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/vdespa/learn-jenkins-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn Jenkins App - GitHub Repository
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.jenkins.io/doc/book/pipeline/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jenkins Pipeline Documentation
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codefresh.io/learn/jenkins/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Codefresh - Learn Jenkins
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }
