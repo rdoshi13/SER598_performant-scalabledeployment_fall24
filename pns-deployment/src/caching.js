@@ -217,6 +217,50 @@ function Caching() {
         </Link>
       </div>
 
+      <section className="references">
+      <h2>References</h2>
+      <ul>
+        <li>
+          Content on caching concepts was inspired by various computer science resources and best practices available on caching.
+        </li>
+        <li>
+          <a
+            href="https://github.com/withPrasheel/caching-demo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://github.com/withPrasheel/caching-demo
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MDN Web Docs - Caching
+          </a>.
+        </li>
+        <li>
+          <a
+            href="https://www.akamai.com/blog/performance/caching-best-practices"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Akamai Caching Best Practices
+          </a>.
+        </li>
+        <li>
+          <a
+            href="https://www.webpagetest.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WebPageTest
+          </a>.
+        </li>
+      </ul>
+    </section>
       <footer className="App-footer">
         <p>&copy; 2024 Caching Tutorial. All rights reserved.</p>
       </footer>

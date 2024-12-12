@@ -335,6 +335,40 @@ git push heroku main`}
         </Link>
       </div>
 
+      <section className="references">
+        <h2>References</h2>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/withPrasheel/my-cdn-demo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://github.com/withPrasheel/my-cdn-demo
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cloudflare's Guide to CDNs
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://devcenter.heroku.com/articles/heroku-cli"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Heroku cli
+            </a>
+          </li>
+        </ul>
+      </section>
+
+
       <footer className="App-footer">
         <p>&copy; 2024 CDN Tutorial. All rights reserved.</p>
       </footer>
