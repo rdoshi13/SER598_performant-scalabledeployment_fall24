@@ -228,18 +228,73 @@
   ],
   "containersQuiz": [
     {
-      "question": "What is Docker used for?",
+      "question": "What is a container in the context of software development?",
       "options": [
-        "Hosting applications",
-        "Containerizing applications",
-        "Orchestrating containers",
-        "Monitoring networks"
+        "A hardware device that stores applications.",
+        "A lightweight, standalone package that includes an application and its dependencies.",
+        "A virtual machine that replicates an operating system.",
+        "A software development methodology."
       ],
       "answer": 1
     },
     {
-      "question": "Which file defines the environment for a Docker container?",
-      "options": ["Dockerfile", "Config.yml", "Package.json", "app.js"],
+      "question": "Which of the following is a key advantage of containers over virtual machines (VMs)?",
+      "options": [
+        "Containers include a full operating system, making them more powerful.",
+        "Containers run directly on hardware without a host OS.",
+        "Containers are more resource-efficient and faster to start compared to VMs.",
+        "Containers are hardware-dependent and require custom configurations."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What problem do containers solve in software development?",
+      "options": [
+        "Ensuring that applications run consistently across different environments.",
+        "Providing an interface for user interaction.",
+        "Debugging application errors in real-time.",
+        "Creating new programming languages."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT true about containers?",
+      "options": [
+        "They isolate applications from the host system.",
+        "They include everything needed to run an application, such as libraries and configuration files.",
+        "They require a hypervisor to run.",
+        "They are more efficient than traditional virtual machines."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Why are containers an essential part of CI/CD pipelines?",
+      "options": [
+        "They eliminate the need for coding.",
+        "They provide consistent environments from development to production.",
+        "They replace the need for cloud services.",
+        "They directly write and deploy code to production."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What is the main purpose of containers in software development?",
+      "options": [
+        "To package and isolate applications with their dependencies.",
+        "To provide a GUI for application deployment.",
+        "To replace physical servers in data centers.",
+        "To simplify code writing and debugging."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which of the following is an example of a container runtime?",
+      "options": [
+        "Docker",
+        "Kubernetes",
+        "GitHub",
+        "Hypervisor"
+      ],
       "answer": 0
     }
   ],

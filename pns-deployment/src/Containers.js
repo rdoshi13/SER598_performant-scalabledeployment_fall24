@@ -1,9 +1,19 @@
 import React from "react";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 function Containers() {
   return (
     <div className="Containers">
+       {/* Navigation Buttons */}
+       <div className="navigation-buttons">
+        <Link to="/cloud-computing" className="home-button">
+        Cloud Computing
+        </Link>
+        <Link to="/kubernetes" className="next-button">
+        Kubernetes
+        </Link>
+      </div>
       <h1>Containers</h1>
 
       <section>
@@ -217,6 +227,35 @@ function Containers() {
     </li>
   </ul>
       </section>
+
+      <footer className="App-footer">
+        <p>
+          Ready to dive deeper into Containers Practice creating your
+          own containers, images!
+        </p>
+      </footer>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+      <Link
+        to={{
+          pathname: "/quiz/containersQuiz",
+        }}
+        state={{ backTo: "/containers", pageName: "Containers" }}
+        style={{
+          display: "inline-block",
+          padding: "10px 20px",
+          fontSize: "16px",
+          fontWeight: "bold",
+          color: "#ffffff",
+          backgroundColor: "#2196f3",
+          border: "none",
+          borderRadius: "8px",
+          textDecoration: "none",
+          cursor: "pointer",
+        }}
+      >
+        Knowledge Check
+      </Link>
+      </div>
     </div>
   );
 }
