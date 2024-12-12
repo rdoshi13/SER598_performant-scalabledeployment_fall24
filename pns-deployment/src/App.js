@@ -35,10 +35,10 @@ function Home() {
             <Link to="/kubernetes">Kubernetes</Link>
           </li>
           <li>
-            <Link to="/cdn">Content Delivery Networks (CDNs)</Link>
+            <Link to="/caching">Caching</Link>
           </li>
           <li>
-            <Link to="/caching">Caching</Link>
+            <Link to="/cdn">Content Delivery Networks (CDNs)</Link>
           </li>
           <li>
             <Link to="/ci-cd">
@@ -89,18 +89,6 @@ function Home() {
           </p>
         </section>
 
-        <section id="cdn">
-          <h3>
-            <Link to="/cdn">Content Delivery Networks (CDNs)</Link>
-          </h3>
-          <p>
-            CDNs improve the performance of websites and applications by caching
-            content at strategically placed servers worldwide. They reduce
-            latency and ensure fast delivery of static and dynamic content to
-            users globally.
-          </p>
-        </section>
-
         <section id="caching">
           <h3>
             <Link to="/caching">Caching</Link>
@@ -110,6 +98,18 @@ function Home() {
             accessed data in memory or nearby storage. This reduces the need for
             repeated database queries or expensive computations, improving
             response times.
+          </p>
+        </section>
+
+        <section id="cdn">
+          <h3>
+            <Link to="/cdn">Content Delivery Networks (CDNs)</Link>
+          </h3>
+          <p>
+            CDNs improve the performance of websites and applications by caching
+            content at strategically placed servers worldwide. They reduce
+            latency and ensure fast delivery of static and dynamic content to
+            users globally.
           </p>
         </section>
 
@@ -141,8 +141,8 @@ function App() {
         <Route path="/containers" element={<Containers />} />
         <Route path="/ci-cd" element={<CICD />} />
         <Route path="/kubernetes" element={<Kubernetes />} />
-        <Route path="/cdn" element={<CDN />} />
         <Route path="/caching" element={<Caching />} />
+        <Route path="/cdn" element={<CDN />} />
 
         <Route path="/quiz/:quizKey" element={<Quiz />} />
       </Routes>
