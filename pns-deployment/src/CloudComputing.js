@@ -14,45 +14,76 @@ function CloudComputing() {
           Containers
         </Link>
       </div>
-      <h1>Cloud Computing</h1>
-
+      <header className="App-header">
+        <h1>Cloud Computing Tutorial</h1>
+      </header>
+      <section>
+        <h2>Learning Outcomes</h2>
+        <p>By the end of this tutorial, learners will be able to:</p>
+        <ul>
+          <li>
+            Define cloud computing and its core concepts, like on-demand
+            self-service, resource pooling, and scalability.
+          </li>
+          <li>
+            Identify the different types of cloud computing services (IaaS,
+            PaaS, SaaS) and explain their use cases with examples.
+          </li>
+          <li>
+            Differentiate between the traditional on-premises IT infrastructure
+            and cloud-based solutions.
+          </li>
+          <li>
+            Create an EC2 instance on AWS using the AWS Management Console.
+          </li>
+          <li>
+            Analyze real-world use cases of cloud computing, such as web
+            hosting, big data analytics, and machine learning.
+          </li>
+          <li>
+            Evaluate the cost-efficiency and flexibility offered by cloud
+            computing for businesses of different sizes.
+          </li>
+        </ul>
+      </section>
       <section>
         <h2>What is Cloud Computing?</h2>
         <p>
-          Cloud computing makes it easy to access powerful computing resources
-          over the Internet without the hassle of managing physical servers. The
-          'cloud' refers to a global network of servers hosted in data centers
-          that power applications, databases, and various services. These
-          servers aren’t floating in the sky—they’re housed in physical data
-          centers, often in buildings near major cities.
+          Without having to deal with the headache of maintaining physical
+          servers, cloud computing makes it simple to access robust computing
+          resources via the Internet. The term 'cloud' describes a global
+          network of servers housed in data centres that support databases,
+          apps, and other services. These servers are physically located in data
+          centres, frequently in buildings close to large cities; they are not
+          floating in the sky.
         </p>
 
         <p>
-          In the past, if you wanted to launch a website or application, you’d
-          need to buy, set up, and maintain your own servers. This process took
-          a lot of time, effort, and money. Cloud computing has changed all
-          that. Now, you can "rent" servers and services as you need them. The
-          cloud provider handles all the maintenance and infrastructure, so you
-          can focus on your work. Once you’re done, you can stop your
-          subscription, saving on unnecessary costs.
+          In the past, in order to establish a website or application, you had
+          to purchase, install, and operate your own servers . A lot of money,
+          time, and effort were spent to complete this process. All of that has
+          altered as a result of cloud computing. Servers and services are now
+          available for "rent" as needed. All infrastructure and maintenance are
+          taken care of by the cloud provider, allowing you to concentrate on
+          your job. You can terminate your subscription after you're finished,
+          which will save you money.
         </p>
 
         <p>
-          Cloud computing isn’t just about hosting websites. It powers
-          everything from data analytics and machine learning to gaming and
-          mobile app development. Whether you're a small startup or a global
-          company, the cloud helps you launch faster, save money, and scale your
-          business effortlessly. Its services include data analytics, machine
-          learning, Internet of Things (IoT), gaming, mobile development, and
-          quantum computing.
+          Website hosting is only one aspect of cloud computing. It drives
+          everything from mobile app development and gaming to machine learning
+          and data analytics. You can launch and scale your apps more quickly,
+          and also save money on this process with cloud. It does not matter if
+          you are a small startup or a Fortune 500 company. Data analytics,
+          machine learning, gaming, mobile development, the Internet of Things
+          (IoT), and quantum computing are some of its offerings.
         </p>
 
         <p>
-          Cloud computing is a model that delivers computing services—such as
-          storage, processing power, and applications—over the Internet. These
-          services eliminate the need for businesses and individuals to maintain
-          physical infrastructure, enabling scalability, flexibility, and cost
-          efficiency.
+          Cloud Computing provides services like storage and processing power
+          using Internet. By removing the need for physical infrastructure
+          maintenance, these services allow for cost effectiveness, scalability,
+          and flexibility for both people and enterprises.
         </p>
 
         <h3>Core Concepts</h3>
@@ -140,30 +171,32 @@ function CloudComputing() {
         </p>
         <ul>
           <li>
-            <strong>Infrastructure as a Service (IaaS):</strong> IaaS provides
-            the foundational infrastructure for your applications without
-            requiring you to handle the physical maintenance of servers and data
-            centers. With IaaS, you have full control over your virtual
-            machines, storage, and networking, while the provider handles the
-            hardware. Examples include Amazon EC2, Google Compute Engine, and
-            Microsoft Azure Virtual Machines.
+            <strong>Infrastructure as a Service (IaaS):</strong> It is a cloud
+            computing model that provides on-demand access to computing
+            resources such as servers, storage, networking, and virtualization.
+            IaaS is attractive because acquiring computing resources to run
+            applications or store data the traditional way requires time and
+            capital. You have full control over your virtual machines, storage,
+            and networking, while the provider handles the hardware.Amazon EC2,
+            Google Compute Engine, and Microsoft Azure Virtual Machines are some
+            of the popular examples.
           </li>
           <li>
             <strong>Platform as a Service (PaaS):</strong> PaaS abstracts the
             infrastructure layer, offering tools to deploy and manage
-            applications. It simplifies development by providing a platform with
-            runtime environments, middleware, and libraries. This allows you to
-            focus on building and deploying applications without worrying about
-            the underlying infrastructure. Examples include AWS Elastic
-            Beanstalk, Google App Engine, and Heroku.
+            applications. It provides a platform with runtime environments,
+            middleware, and libraries. So, now you can focus on building and
+            deploying applications without worrying about the underlying
+            infrastructure.AWS Elastic Beanstalk, Google App Engine, and Heroku
+            are someof the popular examples.
           </li>
           <li>
             <strong>Software as a Service (SaaS):</strong> SaaS provides fully
             functional, ready-to-use software delivered over the Internet. These
             applications are managed and maintained entirely by the provider,
             making them ideal for end-users. SaaS eliminates the need for
-            installation, updates, or troubleshooting. Examples include Gmail,
-            Salesforce, Microsoft Office 365, and Dropbox.
+            installation, updates, or troubleshooting.Gmail, Salesforce,
+            Microsoft Office 365, and Dropbox are some of the popular examples.
           </li>
           <p>
             The table below illustrates the responsibilities in IaaS, PaaS, and
@@ -271,23 +304,22 @@ function CloudComputing() {
           </li>
         </ol>
 
-        <h2>Example Code Snippet</h2>
+        <h3>Example Code Snippet</h3>
         <pre>
           <code>
-            {`// Example code for creating an EC2 instance using AWS SDK
-const AWS = require('aws-sdk');
+            {`const AWS = require('aws-sdk');
 
 // Configure AWS with your access and secret keys. These are unique for all users.
 AWS.config.update({
   accessKeyId: '<access key>',
   secretAccessKey: '<secret key>',
-  region: 'us-east-1',
+  region: 'us-west-1',
 });
 
 // EC2 instance parameters
 const params = {
   ImageId: 'ami-0c55b159cbfafe1f0', // The AMI must match the region. Check in your dashboard to confirm.
-  InstanceType: 't2.micro',         // Free tier eligible instance
+  InstanceType: 't2.micro',         // Free tier eligible instance. Use this to practice.
   MinCount: 1,
   MaxCount: 1,
 };
@@ -356,6 +388,36 @@ ec2.runInstances(params, (err, data) => {
           </a>
         </p>
       </section>
+      <section>
+        <h2>References</h2>
+        <p>
+          I used the following sources to understand these concepts and to
+          better explain them in this tutorial.
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://tutorialsdojo.com/introduction-to-cloud-computing-2/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Intro to Cloud Computing - TutorialsDojo
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://cloud.google.com/learn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Cloud Learn
+            </a>
+          </li>
+        </ul>
+      </section>
+      <footer className="App-footer">
+        <p>&copy; 2024 Cloud Computing Tutorial. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
