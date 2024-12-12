@@ -337,26 +337,6 @@ ec2.runInstances(params, (err, data) => {
           </code>
         </pre>
       </section>
-      <Link
-        to={{
-          pathname: "/quiz/cloudComputingQuiz",
-        }}
-        state={{ backTo: "/cloud-computing", pageName: "Cloud Computing" }}
-        style={{
-          display: "inline-block",
-          padding: "10px 20px",
-          fontSize: "16px",
-          fontWeight: "bold",
-          color: "#ffffff",
-          backgroundColor: "#2196f3",
-          border: "none",
-          borderRadius: "8px",
-          textDecoration: "none",
-          cursor: "pointer",
-        }}
-      >
-        Knowledge Check
-      </Link>
 
       <section>
         <h2>Demo creating an EC2 instance</h2>
@@ -415,6 +395,28 @@ ec2.runInstances(params, (err, data) => {
           </li>
         </ul>
       </section>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <Link
+          to={{
+            pathname: "/quiz/cloudComputingQuiz",
+          }}
+          state={{ backTo: "/cloud-computing", pageName: "Cloud Computing" }}
+          style={{
+            display: "inline-block",
+            padding: "10px 20px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            color: "#ffffff",
+            backgroundColor: "#2196f3",
+            border: "none",
+            borderRadius: "8px",
+            textDecoration: "none",
+            cursor: "pointer",
+          }}
+        >
+          Knowledge Check
+        </Link>
+      </div>
       <footer className="App-footer">
         <p>&copy; 2024 Cloud Computing Tutorial. All rights reserved.</p>
       </footer>
