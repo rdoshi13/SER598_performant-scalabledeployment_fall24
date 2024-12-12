@@ -7,13 +7,26 @@ function Containers() {
     <div className="Containers">
        {/* Navigation Buttons */}
        <div className="navigation-buttons">
-        <Link to="/cloud-computing" className="home-button">
-        Cloud Computing
+        <Link to="/" className="home-button">
+        Home
         </Link>
         <Link to="/kubernetes" className="next-button">
         Kubernetes
         </Link>
       </div>
+      <header className="App-header">
+        <h1>Containers Tutorial</h1>
+      </header>
+      <section>
+  <h2>Learning Outcomes</h2>
+  <ul>
+    <li>Understand what containers are and how they encapsulate applications and their dependencies.</li>
+    <li>Learn the benefits of containerization, such as portability, consistency, and efficiency.</li>
+    <li>Explore the role of containers in microservices architecture and CI/CD pipelines.</li>
+    <li>Gain knowledge about container runtimes like Docker and how they operate.</li>
+    <li>Understand how containers enable modern DevOps practices and cloud-native development.</li>
+  </ul>
+  </section>
       <h1>Containers</h1>
 
       <section>
@@ -225,16 +238,9 @@ function Containers() {
     </li>
   </ul>
       </section>
-      <section>
-  <h2>Learning Outcomes</h2>
-  <ul>
-    <li>Understand what containers are and how they encapsulate applications and their dependencies.</li>
-    <li>Learn the benefits of containerization, such as portability, consistency, and efficiency.</li>
-    <li>Explore the role of containers in microservices architecture and CI/CD pipelines.</li>
-    <li>Gain knowledge about container runtimes like Docker and how they operate.</li>
-    <li>Understand how containers enable modern DevOps practices and cloud-native development.</li>
-  </ul>
+    
 
+  <section>
   <h3>References</h3>
   <ul>
     <li><a href="https://www.docker.com/resources/what-container" target="_blank">What is a Container? (Docker)</a></li>

@@ -11,8 +11,9 @@ function CICD() {
           Home
         </Link>
       </div>
-
+      <header className="App-header">
       <h1>Continuous Integration and Deployment (CI/CD)</h1>
+      </header>
 
       <section>
         <h2>What is CI/CD?</h2>
