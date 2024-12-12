@@ -127,6 +127,51 @@
       "question": "Which is an example of SaaS?",
       "options": ["Google Drive", "Amazon EC2", "Docker", "Kubernetes"],
       "answer": 0
+    },
+    {
+      "question": "Which of the following is NOT a core concept of cloud computing?",
+      "options": [
+        "On-Demand Self-Service",
+        "Resource Pooling",
+        "Physical Server Management",
+        "Pay-As-You-Go Pricing"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What instance type is Free Tier eligible when creating an EC2 instance?",
+      "options": ["t2.micro", "t3.large", "m5.xlarge", "c5.large"],
+      "answer": 0
+    },
+    {
+      "question": "Which service type provides fully functional, ready-to-use software delivered over the Internet?",
+      "options": ["IaaS", "PaaS", "SaaS", "FaaS"],
+      "answer": 2
+    },
+    {
+      "question": "What is a key benefit of cloud computing?",
+      "options": [
+        "Increased hardware maintenance",
+        "Fixed pricing structure",
+        "Cost savings through flexible subscription",
+        "Limited geographical reach"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which AWS service is an example of Infrastructure as a Service (IaaS)?",
+      "options": [
+        "AWS Elastic Beanstalk",
+        "Amazon EC2",
+        "Microsoft Office 365",
+        "Google App Engine"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What port is typically used for SSH connections to EC2 instances?",
+      "options": ["Port 80", "Port 443", "Port 22", "Port 3306"],
+      "answer": 2
     }
   ],
   "containersQuiz": [

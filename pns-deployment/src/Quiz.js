@@ -14,6 +14,7 @@ const Quiz = () => {
   const location = useLocation();
   const backTo = location.state?.backTo || "/";
   const pageName = location.state?.pageName || "Home";
+  const [incorrectAnswers, setIncorrectAnswers] = useState([]);
 
   // const questions = quizData[uniqueKey] || [];
   const questions = quizData[quizKey] || [];
@@ -23,7 +24,17 @@ const Quiz = () => {
   };
 
   const handleSubmitAnswer = () => {
-    if (selectedOption === questions[currentQuestionIndex].answer) {
+    const currentQuestion = questions[currentQuestionIndex];
+    if (selectedOption !== currentQuestion.answer) {
+      setIncorrectAnswers((prev) => [
+        ...prev,
+        {
+          question: currentQuestion.question,
+          userAnswer: currentQuestion.options[selectedOption],
+          correctAnswer: currentQuestion.options[currentQuestion.answer],
+        },
+      ]);
+    } else {
       setScore(score + 1);
     }
     setSelectedOption(null);
@@ -37,9 +48,32 @@ const Quiz = () => {
   if (isCompleted) {
     return (
       <div className="quiz-container">
+        <h3>Quiz Complete!</h3>
         <p>
           Your score is {score} out of {questions.length}
         </p>
+
+        {incorrectAnswers.length > 0 && (
+          <div className="incorrect-answers">
+            <h4>Review of Incorrect Answers:</h4>
+            {incorrectAnswers.map((item, index) => (
+              <div key={index} className="incorrect-answer-item">
+                <p>
+                  <strong>Question:</strong> {item.question}
+                </p>
+                <p>
+                  <span style={{ color: "red" }}>Your answer:</span>{" "}
+                  {item.userAnswer}
+                </p>
+                <p>
+                  <span style={{ color: "green" }}>Correct answer:</span>{" "}
+                  {item.correctAnswer}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className="quiz-navigation-buttons">
           <Link
             to="/"
