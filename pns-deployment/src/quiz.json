@@ -264,5 +264,57 @@
       ],
       "answer": 1
     }
+  ],
+  "cachingQuiz": [
+    {
+      "question": "What is the main purpose of caching?",
+      "options": [
+        "To store large amounts of data permanently",
+        "To temporarily store frequently accessed data for faster access",
+        "To compress data for efficient storage",
+        "To replicate data across multiple servers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is an example of a 'Cache Hit'?",
+      "options": [
+        "Data is retrieved from the original source and then cached",
+        "Data is found in the cache and served immediately",
+        "Cache storage is full and cannot store new data",
+        "Data retrieval fails due to network issues"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What type of cache stores website assets locally on the user’s device?",
+      "options": [
+        "Database Cache",
+        "Content Delivery Network (CDN) Cache",
+        "Application Cache",
+        "Browser Cache"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What is the solution for cached data becoming outdated?",
+      "options": [
+        "Optimize cache population strategies",
+        "Use efficient cache eviction policies like LRU",
+        "Implement cache expiration policies",
+        "Increase cache storage capacity"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which caching type stores website content on servers across the globe?",
+      "options": [
+        "Browser Cache",
+        "Database Cache",
+        "Content Delivery Network (CDN) Cache",
+        "Application Cache"
+      ],
+      "answer": 2
+    }
   ]
 }

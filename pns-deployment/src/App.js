@@ -5,7 +5,7 @@ import CloudComputing from "./CloudComputing";
 import Containers from "./Containers";
 import Kubernetes from "./Kubernetes";
 import CICD from "./CICD";
-// Import the Quiz component
+import Caching from "./caching";
 import Quiz from "./Quiz";
 import CDN from "./CDN";
 
@@ -142,6 +142,7 @@ function App() {
         <Route path="/ci-cd" element={<CICD />} />
         <Route path="/kubernetes" element={<Kubernetes />} />
         <Route path="/cdn" element={<CDN />} />
+        <Route path="/caching" element={<Caching />} />
 
         <Route path="/quiz/:quizKey" element={<Quiz />} />
       </Routes>
