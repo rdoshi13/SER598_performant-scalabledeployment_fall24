@@ -7,6 +7,7 @@ import Kubernetes from "./Kubernetes";
 import CICD from "./CICD";
 // Import the Quiz component
 import Quiz from "./Quiz";
+import CDN from "./CDN";
 
 function Home() {
   return (
@@ -140,6 +141,7 @@ function App() {
         <Route path="/containers" element={<Containers />} />
         <Route path="/ci-cd" element={<CICD />} />
         <Route path="/kubernetes" element={<Kubernetes />} />
+        <Route path="/cdn" element={<CDN />} />
 
         <Route path="/quiz/:quizKey" element={<Quiz />} />
       </Routes>

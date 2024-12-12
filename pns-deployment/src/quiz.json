@@ -112,6 +112,58 @@
       "answer": 0
     }
   ],
+  "cdnQuiz": [
+    {
+      "question": "What is the primary purpose of a Content Delivery Network (CDN)?",
+      "options": [
+        "To store large databases",
+        "To distribute content efficiently across various geographic locations",
+        "To manage user authentication",
+        "To monitor server health"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "How does a CDN reduce latency?",
+      "options": [
+        "By compressing data",
+        "By serving content from the nearest edge server to the user",
+        "By increasing server storage capacity",
+        "By enhancing server processing power"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is NOT a feature typically provided by CDNs?",
+      "options": [
+        "DDoS protection",
+        "Load balancing",
+        "User authentication",
+        "Content caching"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "In the case study, which region experienced the highest latency without a CDN?",
+      "options": [
+        "San Francisco",
+        "New York",
+        "London",
+        "Nepal"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What tool is recommended for configuring a custom domain for your application in the demo?",
+      "options": [
+        "GitHub",
+        "Namecheap",
+        "Docker",
+        "WebPageTest"
+      ],
+      "answer": 1
+    }
+  ],
   "cloudComputingQuiz": [
     {
       "question": "What does IaaS stand for?",
