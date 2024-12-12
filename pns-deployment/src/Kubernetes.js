@@ -9,13 +9,28 @@ function Kubernetes() {
     <div className="kubernetes">
       {/* Navigation Buttons */}
       <div className="navigation-buttons">
-        <Link to="/containers" className="home-button">
-          Containers
+        <Link to="/" className="home-button">
+          Home
         </Link>
-        <Link to="/ci-cd" className="next-button">
-        Continuous Integration and Deployment (CI/CD)
+        <Link to="/caching" className="next-button">
+        Caching
         </Link>
       </div>
+      <header className="App-header">
+        <h1>Kubernetes Tutorial</h1>
+      </header>
+      <section>
+  <h2>Learning Outcomes</h2>
+  <ul>
+    <li>Understand the purpose and benefits of Kubernetes in managing containerized applications.</li>
+    <li>Learn how Kubernetes orchestrates and scales applications across clusters.</li>
+    <li>Gain knowledge about key Kubernetes components such as Pods, Nodes, and Deployments.</li>
+    <li>Be able to use basic `kubectl` commands to interact with a Kubernetes cluster.</li>
+    <li>Explore the concepts of service discovery, load balancing, and self-healing applications in Kubernetes.</li>
+  </ul>
+  </section>
+
+  
       <section className="introduction">
         <h2>Kubernetes</h2>
         <p>
@@ -514,24 +529,7 @@ service/hello-world-service unchanged
       </pre>
       </div>
 </section>
-<section>
-  <h2>Learning Outcomes</h2>
-  <ul>
-    <li>Understand the purpose and benefits of Kubernetes in managing containerized applications.</li>
-    <li>Learn how Kubernetes orchestrates and scales applications across clusters.</li>
-    <li>Gain knowledge about key Kubernetes components such as Pods, Nodes, and Deployments.</li>
-    <li>Be able to use basic `kubectl` commands to interact with a Kubernetes cluster.</li>
-    <li>Explore the concepts of service discovery, load balancing, and self-healing applications in Kubernetes.</li>
-  </ul>
 
-  <h3>References</h3>
-  <ul>
-    <li><a href="https://kubernetes.io/docs/" target="_blank">Kubernetes Official Documentation</a></li>
-    <li><a href="https://www.cncf.io/" target="_blank">Cloud Native Computing Foundation (CNCF)</a></li>
-    <li><a href="https://kubernetesbyexample.com/" target="_blank">Kubernetes By Example</a></li>
-    <li><a href="https://www.youtube.com/playlist?list=PL2qzCKTbjutKLOzIcGpt9R90vxa1se3uj" target="_blank">Kubernetes Tutorials on YouTube</a></li>
-  </ul>
-</section>
 
 
     
@@ -542,6 +540,15 @@ service/hello-world-service unchanged
           own containers, docker images and deployments and use Kubernetes to master deployments! Test your knowledge.
         </p>
       </footer>
+      <section>
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://kubernetes.io/docs/" target="_blank">Kubernetes Official Documentation</a></li>
+    <li><a href="https://www.cncf.io/" target="_blank">Cloud Native Computing Foundation (CNCF)</a></li>
+    <li><a href="https://kubernetesbyexample.com/" target="_blank">Kubernetes By Example</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL2qzCKTbjutKLOzIcGpt9R90vxa1se3uj" target="_blank">Kubernetes Tutorials on YouTube</a></li>
+  </ul>
+</section>
       <div style={{ textAlign: "center", marginTop: "20px" }}>
       <Link
         to={{
