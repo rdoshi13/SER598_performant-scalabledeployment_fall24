@@ -1,20 +1,27 @@
 import React from 'react';
 import './kubernetes.css';
+import { Link } from "react-router-dom";
 
 function Kubernetes() {
   
   return (
     
     <div className="kubernetes">
-      <header className="App-header">
-        <h1>Kubernetes Tutorial</h1>
-      </header>
-
+      {/* Navigation Buttons */}
+      <div className="navigation-buttons">
+        <Link to="/containers" className="home-button">
+          Containers
+        </Link>
+        <Link to="/ci-cd" className="next-button">
+        Continuous Integration and Deployment (CI/CD)
+        </Link>
+      </div>
       <section className="introduction">
-        <h2>Introduction</h2>
+        <h2>Kubernetes</h2>
         <p>
-          Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers.
-          It allows you to manage containerized applications across multiple hosts and provides container-centric infrastructure.
+          Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers.</p>
+          <i>To learn more about containers, click on the link above.</i>
+        <p>It allows you to manage containerized applications across multiple hosts and provides container-centric infrastructure.
         </p>
         <h3>Features</h3>
         <ul>
@@ -512,8 +519,34 @@ service/hello-world-service unchanged
     
 
       <footer className="App-footer">
-        <p>&copy; 2024 Kubernetes Tutorial. All rights reserved.</p>
+        <p>
+          Ready to dive deeper into Docker and Kubernetes Practice creating your
+          own containers, docker images and deployments and use Kubernetes to master deployments!
+        </p>
       </footer>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
+      <Link
+        to={{
+          pathname: "/quiz/kubernetesQuiz",
+        }}
+        state={{ backTo: "/kubernetes", pageName: "Kubernetes" }}
+        style={{
+          display: "inline-block",
+          padding: "10px 20px",
+          fontSize: "16px",
+          fontWeight: "bold",
+          color: "#ffffff",
+          backgroundColor: "#2196f3",
+          border: "none",
+          borderRadius: "8px",
+          textDecoration: "none",
+          cursor: "pointer",
+        }}
+      >
+        Knowledge Check
+      </Link>
+      </div>
+     
     </div>
   );
 

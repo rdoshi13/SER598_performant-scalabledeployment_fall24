@@ -252,7 +252,7 @@
         "A group of containers",
         "A cluster node"
       ],
-      "answer": 2
+      "answer": 1
     },
     {
       "question": "Which command scales up a Kubernetes deployment?",
@@ -261,6 +261,96 @@
         "kubectl scale",
         "kubectl run",
         "kubectl get pods"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Which language is Kubernetes written in?",
+      "options": [
+        "Java",
+        "Go",
+        "C",
+        "C++"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "The markup language used to write Docker configuration files is:",
+      "options": [
+        "JSON",
+        "YAML",
+        "XML",
+        "HTML"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Which of the following is not a container-based alternative to Docker?",
+      "options": [
+        "Kubernetes",
+        "CoreOS' rkt",
+        "Canonical's LXD",
+        "Windows Server Containers"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Information on how to build a Docker image is written in a file named:",
+      "options": [
+        "Dockerfile",
+        "Jenkinsfile",
+        "docker-compose",
+        "dockerimage"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What is a cluster?",
+      "options": [
+        "A specific set of ordered operations",
+        "A computer program or device that provides services to other computers",
+        "A single system made up of servers and other resources",
+        "A software package that performs a specific function for an end user"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "The Docker logo is:",
+      "options": [
+        "a butler",
+        "a sailboat",
+        "an Octocat",
+        "a whale"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "In the context of Kubernetes, what is a container?",
+      "options": [
+        "An application environment installed on software that imitates dedicated hardware",
+        "A unit that stores data on a computer's memory drive",
+        "A large metal box that is used to hold or transport something",
+        "A package that relies on virtual isolation technology to deploy and run applications that access a shared OS kernel"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What is the function of a node?",
+      "options": [
+        "To communicate with hosts on a network",
+        "To store data collected by the OS",
+        "To run pods according to master components",
+        "To channel incoming data from multiple input ports to a specific port"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which of the following statements is most correct?",
+      "options": [
+        "Docker allows you to run images and build containers.",
+        "Docker allows you to run containers and build images.",
+        "Docker allows you to run and build containers.",
+        "Docker allows you to run and build images."
       ],
       "answer": 1
     }
