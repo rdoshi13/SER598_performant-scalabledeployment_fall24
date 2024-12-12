@@ -5,9 +5,42 @@ import { Link } from "react-router-dom";
 function CDN() {
   return (
     <div className="cdn">
+      <div className="navigation-buttons">
+        <Link to="/" className="home-button">
+          Home
+        </Link>
+        <Link to="/ci-cd" className="next-button">
+        CICD
+        </Link>
+      </div>
       <header className="App-header">
         <h1>Content Delivery Network (CDN) Tutorial</h1>
       </header>
+
+      <section className="learning-outcomes">
+      <h2>Learning Outcomes</h2>
+      <ul>
+        <li>
+          <strong>Remember:</strong> Define a Content Delivery Network (CDN) and describe its purpose in web content delivery.
+        </li>
+        <li>
+          <strong>Understand:</strong> Explain the benefits of CDNs, including latency reduction, load balancing, and faster user experiences.
+        </li>
+        <li>
+          <strong>Apply:</strong> Demonstrate the deployment of an application using a CDN to serve content more efficiently.
+        </li>
+        <li>
+          <strong>Analyze:</strong> Compare the performance differences between a centralized server and a CDN-backed architecture by interpreting latency metrics.
+        </li>
+        <li>
+          <strong>Evaluate:</strong> Assess the role of CDNs in improving scalability and user satisfaction in real-world scenarios.
+        </li>
+        <li>
+          <strong>Create:</strong> Design a content delivery solution that incorporates CDNs to address scalability challenges and optimize performance for global audiences.
+        </li>
+      </ul>
+    </section>
+
 
       <section className="introduction">
         <h2>Introduction</h2>
@@ -270,7 +303,9 @@ git push heroku main`}
                 </ul>
             </li>
         </ul>
-        
+      </section>
+
+      <section>
         <h3>Conclusion</h3>
         <p>
           Implementing a CDN transforms the content delivery architecture from a single centralized server to a distributed network of edge servers. This setup ensures that users worldwide experience faster load times, improved reliability, and enhanced security, which are crucial for maintaining a competitive edge in the digital landscape.

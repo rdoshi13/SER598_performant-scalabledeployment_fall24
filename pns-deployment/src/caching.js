@@ -10,11 +10,27 @@ function Caching() {
         <Link to="/" className="home-button">
           Home
         </Link>
+        <Link to="/CDN" className="next-button">
+          CDN
+        </Link>
       </div>
 
       <header className="App-header">
         <h1>Caching Tutorial</h1>
       </header>
+
+      <section className="learning-outcomes">
+      <h2>Learning Outcomes</h2>
+      <ul>
+        <li><strong>Remember:</strong> Define caching and describe its purpose in computer systems and networks.</li>
+        <li><strong>Understand:</strong> Explain the importance of caching, including how it improves performance, reduces server load, and enhances cost efficiency.</li>
+        <li><strong>Apply:</strong> Demonstrate the ability to implement caching in a small-scale project using a React application.</li>
+        <li><strong>Analyze:</strong> Compare and contrast the performance outcomes with and without caching by interpreting latency results.</li>
+        <li><strong>Evaluate:</strong> Assess the effectiveness of caching strategies in optimizing data retrieval and identify potential challenges, such as stale data or cache misses.</li>
+        <li><strong>Create:</strong> Design a system or workflow that utilizes caching to improve application performance and scalability, incorporating techniques like browser caching, database caching, or CDN caching.</li>
+      </ul>
+    </section>
+
 
       <section className="introduction">
         <h2>Introduction to Caching</h2>
