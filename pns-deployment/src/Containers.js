@@ -176,9 +176,7 @@ function Containers() {
 
       <section>
         <h2>Use Cases of Containerization</h2>
-        <p>
-          A placeholder for an interactive sandbox where users can try cloud
-          computing demos. This could use a real-time editor in the future.
+        
           <img
     src="https://media.licdn.com/dms/image/v2/D5612AQE4PAq43JAJGA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1700701203965?e=2147483647&v=beta&t=Lt27sRPuA8indsMLl4ivWJieXco-Xy4PvE7uDfe4A3w"
     alt="Containers in Cloud Computing"
@@ -188,7 +186,7 @@ function Containers() {
       display: 'block',
       margin: '0',
     }}/>
-        </p>
+        
         <ul>
     <li>
       <strong>Microservices Deployment:</strong>
@@ -227,11 +225,30 @@ function Containers() {
     </li>
   </ul>
       </section>
+      <section>
+  <h2>Learning Outcomes</h2>
+  <ul>
+    <li>Understand what containers are and how they encapsulate applications and their dependencies.</li>
+    <li>Learn the benefits of containerization, such as portability, consistency, and efficiency.</li>
+    <li>Explore the role of containers in microservices architecture and CI/CD pipelines.</li>
+    <li>Gain knowledge about container runtimes like Docker and how they operate.</li>
+    <li>Understand how containers enable modern DevOps practices and cloud-native development.</li>
+  </ul>
+
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://www.docker.com/resources/what-container" target="_blank">What is a Container? (Docker)</a></li>
+    <li><a href="https://www.redhat.com/en/topics/containers" target="_blank">Containers Overview (Red Hat)</a></li>
+    <li><a href="https://www.ibm.com/cloud/learn/containers" target="_blank">Containers Guide (IBM Cloud)</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL2qzCKTbjutKLOzIcGpt9R90vxa1se3uj" target="_blank">Containers Tutorials on YouTube</a></li>
+  </ul>
+</section>
+
 
       <footer className="App-footer">
         <p>
           Ready to dive deeper into Containers Practice creating your
-          own containers, images!
+          own containers, images! Test your knowledge.
         </p>
       </footer>
       <div style={{ textAlign: "center", marginTop: "20px" }}>
