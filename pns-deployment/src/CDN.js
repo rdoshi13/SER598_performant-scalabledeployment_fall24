@@ -260,13 +260,13 @@ git push heroku main`}
         </ul>
 
         <h4>Conclusion</h4>
-        <hr/>
+        <hr />
         <ul>
             <li>
                 <ul>
-                <li>The above applicaiton is deployed on <code>https://my-cdn-demo-app-292e59634003.herokuapp.com/</code></li>
-            <li>The webste had a Time to First Byte time of 0.890s in <a href="https://drive.google.com/file/d/1Sr3_Ytoq2gN-wphIBQUH2zdF3nVaxexs/view?usp=sharing">Virgina</a> and of 1.743s in <a href="https://drive.google.com/file/d/1J-dEDpLBGtODkQa-N2GTBqPonwo9lTGx/view?usp=sharing">Singapore</a> with the links to test file attached to the names. </li>
-            <li>If you follow the above steps, it should reduce the First Byte time to sub 1s for both the regions.</li>
+                    <li>The above applicaiton is deployed on <code>https://my-cdn-demo-app-292e59634003.herokuapp.com/</code></li>
+                    <li>The website had a Time to First Byte time of 0.890s in <a href="https://drive.google.com/file/d/1Sr3_Ytoq2gN-wphIBQUH2zdF3nVaxexs/view?usp=sharing">Virgina</a> and of 1.743s in <a href="https://drive.google.com/file/d/1J-dEDpLBGtODkQa-N2GTBqPonwo9lTGx/view?usp=sharing">Singapore</a> with the links to test file attached to the names. </li>
+                    <li>If you follow the above steps, it should reduce the First Byte time to sub 1s for both the regions.</li>
                 </ul>
             </li>
         </ul>
